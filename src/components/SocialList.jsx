@@ -7,7 +7,6 @@ SocialList.propTypes = {
 };
 
 export default function SocialList({ isDark }) {
-    console.log(statData);
     return (
         <ul className="py-4 lg:max-w-screen-xl mx-auto grid sm:grid-cols-2 sm:gap-6 lg:grid-cols-4 lg:gap-8">
             {statData.map((social, i) => (

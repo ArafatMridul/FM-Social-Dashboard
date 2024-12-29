@@ -12,7 +12,7 @@ export default function OverViewList({ isDark }) {
             <p
                 className={`text-2xl font-fw-bold mb-6 ${
                     isDark ? "text-dark-txt-2" : "text-light-txt-1"
-                }`}
+                } transition-all duration-300`}
             >
                 Overview - Today
             </p>

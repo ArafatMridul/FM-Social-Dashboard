@@ -12,22 +12,24 @@ export default function Social({ social, isDark }) {
         <li className="list-none">
             <div
                 className={`relative w-full rounded-md my-6 py-8 flex flex-col items-center gap-6  ${
-                    isDark ? "bg-dark-card-bg" : "bg-light-card-bg"
-                } overflow-hidden`}
+                    isDark
+                        ? "bg-dark-card-bg hover:bg-dark-txt-1 hover:bg-opacity-40"
+                        : "bg-light-card-bg hover:bg-light-tgl hover:bg-opacity-65"
+                } overflow-hidden hover:-translate-y-2 transition-all duration-300 cursor-pointer`}
             >
                 <div
                     className={`absolute top-0 h-[5px] w-full ${
                         social.gradient
                             ? "bg-gradient-to-r from-clr-ig-1 to-clr-ig-2"
                             : social.topClr
-                    }`}
+                    } transition-all duration-300`}
                 ></div>
                 <div className="flex items-center gap-2">
                     <img src={social.icon} alt="fb" />
                     <p
                         className={`text-xs font-fw-bold ${
                             isDark ? "text-dark-txt-1" : "text-light-txt-1"
-                        }`}
+                        } transition-all duration-300`}
                     >
                         {social.name}
                     </p>
@@ -36,7 +38,7 @@ export default function Social({ social, isDark }) {
                     <p
                         className={`font-fw-bold text-6xl ${
                             isDark ? "text-dark-txt-2" : "text-light-txt-2"
-                        }`}
+                        } transition-all duration-300`}
                     >
                         {social.followers > 10000
                             ? (social.followers / 1000)
@@ -46,7 +48,7 @@ export default function Social({ social, isDark }) {
                     </p>
                     <p
                         className={`uppercase leading-6 tracking-[4px] text-sm ${
-                            isDark ? "text-dark-txt-1" : "text-light-txt-1  "
+                            isDark ? "text-dark-txt-1" : "text-light-txt-1"
                         } font-fw-normal`}
                     >
                         {social.subHeading}

@@ -5,7 +5,7 @@ import SocialList from "./components/SocialList";
 import OverViewList from "./components/OverViewList";
 
 export default function App() {
-    const [isDark, setIsDark] = useState(false);
+    const [isDark, setIsDark] = useState(true);
     function handleToggle() {
         setIsDark((pv) => !pv);
     }
@@ -14,7 +14,7 @@ export default function App() {
         <div
             className={`relative w-full px-6 py-10 z-20 ${
                 isDark ? "bg-dark-bg" : "bg-light-bg"
-            } lg:h-screen lg:`}
+            } lg:h-screen transition-colors duration-300`}
         >
             <Heading isDark={isDark}>
                 <ToggleBtn isDark={isDark} handleToggle={handleToggle} />

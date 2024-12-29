@@ -37,6 +37,9 @@ export default {
                 "light-txt-1": "hsl(228, 12%, 44%)",
                 "light-txt-2": "hsl(230, 17%, 14%)",
             },
+            boxShadow: {
+                custom: "2px 0 20px rgba(72, 158, 255, 0.5), -2px 0 20px rgba(37, 207, 133, 0.5)",
+            },
         },
     },
     plugins: [],
